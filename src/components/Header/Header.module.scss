@@ -1,0 +1,106 @@
+@import '/src/scss/variables';
+@import '/src/scss/mixins';
+
+.header {
+  height: 96px;
+  position: relative;
+
+  &__container {
+    position: relative;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    background-color: $primary-white;
+    padding-inline: $mobile-outside-spacing;
+  }
+  &__logo {
+    width: 202px;
+    height: auto;
+    cursor: pointer;
+  }
+  &__controller {
+    position: relative;
+    width: 24px;
+    height: auto;
+  }
+  &__menu {
+    position: absolute;
+    z-index: 998;
+    background-color: $primary-black;
+    padding: 40px 25px;
+    transform: translateY(-100%);
+    transition: all 0.5s ease;
+    width: 100%;
+
+    &--active {
+      transform: translateY(0%);
+    }
+  }
+  &__links {
+    padding-block: 15px;
+    list-style-type: none;
+    height: auto;
+    cursor: pointer;
+
+    & > a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 2.4rem;
+      line-height: 25px;
+      letter-spacing: 2px;
+      color: $primary-white;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    position: static;
+    height: 160px;
+    display: grid;
+    grid-template-columns: 0.85fr 1fr;
+    grid-template-rows: 1fr;
+    width: $tablet-outside-spacing;
+    margin: 0 auto;
+
+    &__container {
+      height: auto;
+      padding-inline: 0;
+    }
+    &__controller {
+      display: none;
+    }
+    &__menu {
+      position: static;
+      transform: translateY(0%);
+      background-color: $primary-white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      height: auto;
+      padding-inline: 0;
+      padding-block: 0;
+    }
+    &__links {
+      & > a {
+        font-size: 1.4rem;
+        line-height: 14px;
+        color: $secondary-dark-grey;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header {
+    width: $desktop-outside-spacing;
+
+    &__menu {
+      justify-content: end;
+      gap: 40px;
+    }
+  }
+}
