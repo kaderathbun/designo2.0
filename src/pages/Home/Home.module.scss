@@ -1,2 +1,42 @@
 @import '/src/scss/variables';
 @import '/src/scss/mixins';
+
+.hero {
+  background-color: $primary-peach;
+  padding-inline: $mobile-outside-spacing;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  height: 843px;
+  padding-block: 75px 0;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: $margin-bottom;
+
+  &__heading {
+    font-size: 3.2rem;
+    font-weight: $weight-regular;
+    line-height: 36px;
+    color: $primary-white;
+    text-align: center;
+  }
+  &__sub-heading {
+    font-size: 1.5rem;
+    font-weight: $weight-regular;
+    line-height: 25px;
+    color: $primary-white;
+    text-align: center;
+  }
+  &__cta {
+    position: relative;
+    z-index: 998;
+    @include cta;
+  }
+  &__image {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    transform: scale(1.65) translateY(120px);
+  }
+}
