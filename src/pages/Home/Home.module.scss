@@ -12,7 +12,6 @@
   padding-block: 75px 0;
   position: relative;
   overflow: hidden;
-  margin-bottom: $margin-bottom;
 
   &__heading {
     font-size: 3.2rem;
@@ -37,6 +36,15 @@
     position: absolute;
     z-index: 0;
     bottom: 0;
+    top: 35%;
     transform: scale(1.65) translateY(120px);
   }
+}
+
+.services {
+  margin-block: $margin-block;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-inline: $mobile-outside-spacing;
 }

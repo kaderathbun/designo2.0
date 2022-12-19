@@ -5,10 +5,13 @@ import { Link } from 'react-router-dom'
 import styles from './Home.module.scss'
 import phone from '../../assets/home/desktop/image-hero-phone.png'
 
+// components
+import ServicesCards from '../../components/ServicesCards/ServicesCards'
+
 export default function Home() {
   return (
-    <section className={styles.home}>
-      <div className={styles.hero}>
+    <main className={styles.home}>
+      <section className={styles.hero}>
         <h1 className={styles.hero__heading}>
           Award-winning custom designs and digital branding solutions
         </h1>
@@ -23,7 +26,10 @@ export default function Home() {
           src={phone}
           alt="Smartphone showcasing design"
         />
-      </div>
-    </section>
+      </section>
+      <section className={styles.services}>
+        <ServicesCards />
+      </section>
+    </main>
   )
 }
