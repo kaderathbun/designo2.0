@@ -59,10 +59,12 @@ const services = [
   {
     heading: 'App Design',
     image: appDesignMobile,
+    redirect: '/app-design',
   },
   {
     heading: 'Graphic Design',
     image: graphicDesignMobile,
+    redirect: '/graphic-design',
   },
 ]
 

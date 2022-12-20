@@ -23,7 +23,7 @@ export default function ServicesCards({ data }) {
                 <img className={styles.card__arrow} src={arrow} alt="" />
               </span>
             </div>
-            <Link className={styles.card__link}></Link>
+            <Link to={service.redirect} className={styles.card__link}></Link>
           </div>
         )
       })}
