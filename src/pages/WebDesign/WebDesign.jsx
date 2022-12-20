@@ -1,7 +1,7 @@
 import React from 'react'
 
 // styles
-import styles from './WebDesign.module.scss'
+import styles from '../../scss/Design.module.scss'
 import express from '../../assets/web-design/desktop/image-express.jpg'
 import transfer from '../../assets/web-design/desktop/image-transfer.jpg'
 import photon from '../../assets/web-design/desktop/image-photon.jpg'
@@ -69,7 +69,7 @@ const services = [
 export default function WebDesign() {
   return (
     <React.Fragment>
-      <main className={styles.web}>
+      <main>
         <section className={styles.hero}>
           <HeroCards>
             <h1 className={styles.hero__heading}>Web Design</h1>
