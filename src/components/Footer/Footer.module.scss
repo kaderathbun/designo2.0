@@ -1,0 +1,96 @@
+@import '/src/scss/variables';
+@import '/src/scss/mixins';
+
+.footer {
+  background: linear-gradient(0deg, #1d1c1e 80%, rgb(255, 255, 255) 80%);
+
+  &__card {
+    height: 379px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-inline: $mobile-outside-spacing;
+    padding-inline: 23px;
+    background-color: $primary-peach;
+    border-radius: $border-radius;
+  }
+  &__card-heading {
+    font-size: 3.2rem;
+    font-weight: $weight-bold;
+    line-height: 36px;
+    color: $primary-white;
+    text-align: center;
+  }
+  &__card-sub-heading {
+    font-size: 1.5rem;
+    font-weight: $weight-regular;
+    line-height: 25px;
+    color: $primary-white;
+    text-align: center;
+  }
+  &__cta {
+    @include cta;
+  }
+  &__info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-block: 75px;
+    padding-inline: $mobile-outside-spacing;
+  }
+  &__logo {
+    width: 202px;
+    height: auto;
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    border-top: 1px solid rgba($primary-white, 0.25);
+    padding-top: 30px;
+
+    & > li {
+      list-style-type: none;
+
+      & > a {
+        font-size: 1.4rem;
+        font-weight: $weight-regular;
+        line-height: 14px;
+        letter-spacing: 2px;
+        color: $primary-white;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+    }
+  }
+  &__address-container,
+  &__contact-container {
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.6rem;
+    font-weight: $weight-regular;
+    line-height: 26px;
+    color: rgba($primary-white, 0.5);
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    & > span > a {
+      color: rgba($primary-white, 0.5);
+      text-decoration: none;
+    }
+  }
+  &__social-menu {
+    width: 55%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+}

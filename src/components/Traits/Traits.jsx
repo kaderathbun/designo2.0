@@ -16,7 +16,7 @@ const traits = [
   },
   {
     image: resourceful,
-    heading: 'Resourseful',
+    heading: 'Resourceful',
     subHeading:
       'Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value customer collaboration. It guarantees superior results that fulfill our clients’ needs.',
   },
