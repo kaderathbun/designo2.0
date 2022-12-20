@@ -7,6 +7,7 @@ import phone from '../../assets/home/desktop/image-hero-phone.png'
 
 // components
 import ServicesCards from '../../components/ServicesCards/ServicesCards'
+import Traits from '../../components/Traits/Traits'
 
 export default function Home() {
   return (
@@ -29,6 +30,9 @@ export default function Home() {
       </section>
       <section className={styles.services}>
         <ServicesCards />
+      </section>
+      <section className={styles.traits}>
+        <Traits />
       </section>
     </main>
   )

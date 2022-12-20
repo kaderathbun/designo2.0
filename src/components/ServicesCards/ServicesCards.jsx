@@ -29,20 +29,20 @@ export default function ServicesCards() {
     <React.Fragment>
       {services.map((service) => {
         return (
-          <div className={styles.card}>
+          <div key={service.heading} className={styles.card}>
             <img
-              className={styles.image}
+              className={styles.card__image}
               src={service.image}
               alt={service.heading}
             />
-            <div className={styles['text-container']}>
-              <span className={styles.heading}>{service.heading}</span>
-              <span className={styles['sub-heading']}>
+            <div className={styles['card__text-container']}>
+              <span className={styles.card__heading}>{service.heading}</span>
+              <span className={styles['card__sub-heading']}>
                 View Projects
-                <img className={styles.arrow} src={arrow} alt="" />
+                <img className={styles.card__arrow} src={arrow} alt="" />
               </span>
             </div>
-            <Link className={styles.link}></Link>
+            <Link className={styles.card__link}></Link>
           </div>
         )
       })}

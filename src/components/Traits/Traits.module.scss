@@ -1,0 +1,39 @@
+@import '/src/scss/variables';
+@import '/src/scss/mixins';
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  &__image {
+    width: 202px;
+    height: auto;
+    background-image: url('../../assets/shared/desktop/bg-pattern-small-circle.svg');
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+  }
+  &__heading {
+    font-size: 2rem;
+    font-weight: $weight-bold;
+    line-height: 26px;
+    letter-spacing: 5px;
+    color: $secondary-dark-grey;
+    text-transform: uppercase;
+  }
+  &__sub-heading {
+    font-size: 1.6rem;
+    font-weight: $weight-regular;
+    line-height: 26px;
+    color: $secondary-dark-grey;
+  }
+}
