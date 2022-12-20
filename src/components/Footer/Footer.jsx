@@ -35,8 +35,18 @@ const socials = [
 
 export default function Footer({ isSecondary }) {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.footer__card}>
+    <footer
+      className={styles.footer}
+      style={{
+        background: isSecondary
+          ? 'linear-gradient(0deg, #1d1c1e 100%, rgb(255, 255, 255) 100%)'
+          : {},
+      }}
+    >
+      <div
+        className={styles.footer__card}
+        style={{ display: isSecondary ? 'none' : 'flex' }}
+      >
         <h3 className={styles['footer__card-heading']}>
           Let’s talk about your project
         </h3>

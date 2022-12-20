@@ -37,7 +37,7 @@ export default function Home() {
           <Traits />
         </section>
       </main>
-      <Footer />
+      <Footer isSecondary={false} />
     </React.Fragment>
   )
 }
