@@ -4,30 +4,11 @@ import { Link } from 'react-router-dom'
 // styles
 import styles from './ServicesCards.module.scss'
 import arrow from '../../assets/shared/desktop/icon-right-arrow.svg'
-import webDesignMobile from '../../assets/home/mobile/image-web-design.jpg'
-import appDesignMobile from '../../assets/home/mobile/image-app-design.jpg'
-import graphicDesignMobile from '../../assets/home/mobile/image-graphic-design.jpg'
 
-// data
-const services = [
-  {
-    heading: 'Web Design',
-    image: webDesignMobile,
-  },
-  {
-    heading: 'App Design',
-    image: appDesignMobile,
-  },
-  {
-    heading: 'Graphic Design',
-    image: graphicDesignMobile,
-  },
-]
-
-export default function ServicesCards() {
+export default function ServicesCards({ data }) {
   return (
     <React.Fragment>
-      {services.map((service) => {
+      {data.map((service) => {
         return (
           <div key={service.heading} className={styles.card}>
             <img

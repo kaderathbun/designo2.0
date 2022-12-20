@@ -1,0 +1,17 @@
+@import '/src/scss/variables';
+@import '/src/scss/mixins';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  height: 320px;
+  background-color: $primary-peach;
+  background-image: url('../../assets/home/desktop/bg-pattern-hero-home.svg');
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: top right;
+  padding-inline: $mobile-outside-spacing;
+}

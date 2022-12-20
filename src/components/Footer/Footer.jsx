@@ -14,22 +14,27 @@ const socials = [
   {
     img: facebook,
     name: 'Facebook',
+    redirect: 'https://www.facebook.com',
   },
   {
     img: youtube,
     name: 'Youtube',
+    redirect: 'https://www.youtube.com',
   },
   {
     img: twitter,
     name: 'Twitter',
+    redirect: 'https://www.twitter.com',
   },
   {
     img: pinterest,
     name: 'Pinterest',
+    redirect: 'https://www.pinterest.com',
   },
   {
     img: instagram,
     name: 'Instagram',
+    redirect: 'https://www.instagram.com',
   },
 ]
 
@@ -85,7 +90,16 @@ export default function Footer({ isSecondary }) {
         </address>
         <div className={styles['footer__social-menu']}>
           {socials.map((social) => {
-            return <img key={social.name} src={social.img} alt={social.name} />
+            return (
+              <a
+                key={social.name}
+                href={social.redirect}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={social.img} alt={social.name} />
+              </a>
+            )
           })}
         </div>
       </div>

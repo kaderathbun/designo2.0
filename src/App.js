@@ -9,6 +9,7 @@ import Header from './components/Header/Header'
 
 // pages
 import Home from './pages/Home/Home'
+import WebDesign from './pages/WebDesign/WebDesign'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Header />
         <Routes>
           <Route index={true} path="/" element={<Home />} />
+          <Route path="/web-design" element={<WebDesign />} />
         </Routes>
       </BrowserRouter>
     </div>

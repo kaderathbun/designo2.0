@@ -12,6 +12,9 @@
   padding-block: 75px 0;
   position: relative;
   overflow: hidden;
+  background-image: url('../../assets/home/desktop/bg-pattern-hero-home.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
 
   &__heading {
     font-size: 3.2rem;
