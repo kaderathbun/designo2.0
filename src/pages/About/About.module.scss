@@ -24,3 +24,17 @@
   margin-block: $margin-block;
   padding-inline: $mobile-outside-spacing;
 }
+
+@media only screen and (min-width: 768px) {
+  .about {
+    &__heading {
+      font-size: 4.8rem;
+      line-height: 48px;
+    }
+    &__sub-heading {
+      width: 87%;
+      font-size: 1.6rem;
+      line-height: 26px;
+    }
+  }
+}

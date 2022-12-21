@@ -9,7 +9,7 @@ import arrow from '../../assets/shared/desktop/icon-right-arrow.svg'
 export default function ServicesCards({ data }) {
   return (
     <React.Fragment>
-      <MediaQuery minWidth={375} maxWidth={767}>
+      <MediaQuery minWidth={0} maxWidth={767}>
         {data.map((service) => {
           return (
             <div key={service.heading} className={styles.card}>
