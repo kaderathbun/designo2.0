@@ -13,6 +13,7 @@ import WebDesign from './pages/WebDesign/WebDesign'
 import AppDesign from './pages/AppDesign/AppDesign'
 import GraphicDesign from './pages/GraphicDesign/GraphicDesign'
 import About from './pages/About/About'
+import Locations from './pages/Locations/Locations'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/app-design" element={<AppDesign />} />
           <Route path="/graphic-design" element={<GraphicDesign />} />
           <Route path="/about" element={<About />} />
+          <Route path="/locations" element={<Locations />} />
         </Routes>
       </BrowserRouter>
     </div>
