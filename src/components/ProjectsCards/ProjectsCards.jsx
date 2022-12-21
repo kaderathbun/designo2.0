@@ -3,7 +3,6 @@ import React from 'react'
 import styles from './ProjectsCards.module.scss'
 
 export default function ProjectsCards({ data }) {
-  // console.log(data)
   return (
     <React.Fragment>
       {data.map((project) => {

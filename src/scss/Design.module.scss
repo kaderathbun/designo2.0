@@ -32,3 +32,20 @@
   gap: 30px;
   padding-inline: $mobile-outside-spacing;
 }
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    &__heading {
+      font-size: 4.8rem;
+      line-height: 48px;
+    }
+    &__sub-heading {
+      font-size: 1.6rem;
+      line-height: 26px;
+      width: 60%;
+    }
+  }
+  .projects {
+    padding: 0;
+  }
+}

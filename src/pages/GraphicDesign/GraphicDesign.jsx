@@ -7,6 +7,8 @@ import boxedWater from '../../assets/graphic-design/desktop/image-boxed-water.jp
 import science from '../../assets/graphic-design/desktop/image-science.jpg'
 import appDesignMobile from '../../assets/home/mobile/image-app-design.jpg'
 import webDesignMobile from '../../assets/home/mobile/image-web-design.jpg'
+import appDesignTablet from '../../assets/home/tablet/image-app-design.jpg'
+import webDesignTablet from '../../assets/home/tablet/image-web-design.jpg'
 
 // components
 import HeroCards from '../../components/HeroCards/HeroCards'
@@ -35,12 +37,14 @@ const projects = [
 const services = [
   {
     heading: 'App Design',
-    image: appDesignMobile,
+    imageMobile: appDesignMobile,
+    imageTablet: appDesignTablet,
     redirect: '/app-design',
   },
   {
     heading: 'Web Design',
-    image: webDesignMobile,
+    imageMobile: webDesignMobile,
+    imageTablet: webDesignTablet,
     redirect: '/web-design',
   },
 ]

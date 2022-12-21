@@ -2,6 +2,9 @@
 @import '/src/scss/mixins';
 
 .card {
+  display: flex;
+  flex-direction: column;
+
   &__image {
     border-radius: $border-radius $border-radius 0 0;
   }
@@ -30,5 +33,21 @@
     line-height: 26px;
     color: $secondary-dark-grey;
     text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    flex-direction: row;
+
+    &__image {
+      height: 310px;
+      border-radius: $border-radius 0 0 $border-radius;
+    }
+    &__container {
+      height: 310px;
+      width: 100%;
+      border-radius: 0 $border-radius $border-radius 0;
+    }
   }
 }

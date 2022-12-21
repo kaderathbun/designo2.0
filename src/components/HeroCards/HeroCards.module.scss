@@ -15,3 +15,13 @@
   background-position: top right;
   padding-inline: $mobile-outside-spacing;
 }
+
+@media only screen and (min-width: 768px) {
+  .card {
+    border-radius: $border-radius;
+    height: 252px;
+    background-repeat: repeat;
+    background-size: 40%;
+    background-position: top -150px left;
+  }
+}

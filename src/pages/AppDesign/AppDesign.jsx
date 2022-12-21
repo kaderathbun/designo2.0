@@ -9,6 +9,8 @@ import todo from '../../assets/app-design/desktop/image-todo.jpg'
 import loopStudios from '../../assets/app-design/desktop/image-loopstudios.jpg'
 import webDesignMobile from '../../assets/home/mobile/image-web-design.jpg'
 import graphicDesignMobile from '../../assets/home/mobile/image-graphic-design.jpg'
+import webDesignTablet from '../../assets/home/tablet/image-web-design.jpg'
+import graphicDesigntablet from '../../assets/home/tablet/image-graphic-design.jpg'
 
 // components
 import HeroCards from '../../components/HeroCards/HeroCards'
@@ -50,12 +52,14 @@ const projects = [
 const services = [
   {
     heading: 'Web Design',
-    image: webDesignMobile,
+    imageMobile: webDesignMobile,
+    imageTablet: webDesignTablet,
     redirect: '/web-design',
   },
   {
     heading: 'Graphic Design',
-    image: graphicDesignMobile,
+    imageMobile: graphicDesignMobile,
+    imageTablet: graphicDesigntablet,
     redirect: '/graphic-design',
   },
 ]

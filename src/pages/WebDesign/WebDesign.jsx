@@ -10,6 +10,8 @@ import blogr from '../../assets/web-design/desktop/image-blogr.jpg'
 import camp from '../../assets/web-design/desktop/image-camp.jpg'
 import appDesignMobile from '../../assets/home/mobile/image-app-design.jpg'
 import graphicDesignMobile from '../../assets/home/mobile/image-graphic-design.jpg'
+import appDesignTablet from '../../assets/home/tablet/image-app-design.jpg'
+import graphicDesignTablet from '../../assets/home/tablet/image-graphic-design.jpg'
 
 // components
 import HeroCards from '../../components/HeroCards/HeroCards'
@@ -58,12 +60,14 @@ const projects = [
 const services = [
   {
     heading: 'App Design',
-    image: appDesignMobile,
+    imageMobile: appDesignMobile,
+    imageTablet: appDesignTablet,
     redirect: '/app-design',
   },
   {
     heading: 'Graphic Design',
-    image: graphicDesignMobile,
+    imageMobile: graphicDesignMobile,
+    imageTablet: graphicDesignTablet,
     redirect: '/graphic-design',
   },
 ]
