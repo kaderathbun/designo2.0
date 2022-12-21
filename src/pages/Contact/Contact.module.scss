@@ -98,3 +98,33 @@
   margin-block: $margin-block;
   padding-inline: $mobile-outside-spacing;
 }
+
+@media only screen and (min-width: 768px) {
+  .form {
+    border-radius: 15px;
+    background-image: url('../../assets/shared/desktop/bg-pattern-small-circle.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top -100px left -120px;
+
+    &__form-container {
+      padding: 75px;
+    }
+
+    &__heading {
+      font-size: 4.8rem;
+      line-height: 48px;
+      text-align: left;
+    }
+    &__sub-heading {
+      font-size: 1.6rem;
+      line-height: 26px;
+      text-align: left;
+    }
+    &__btn {
+      margin: 0;
+      margin-top: 30px;
+      margin-left: auto;
+    }
+  }
+}
