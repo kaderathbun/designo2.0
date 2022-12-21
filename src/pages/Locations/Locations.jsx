@@ -9,11 +9,13 @@ import Footer from '../../components/Footer/Footer'
 
 export default function Locations() {
   return (
-    <main>
-      <section className={styles.locations}>
-        <MapCards />
-      </section>
+    <React.Fragment>
+      <main>
+        <section className={styles.locations}>
+          <MapCards />
+        </section>
+      </main>
       <Footer isSecondary={false} />
-    </main>
+    </React.Fragment>
   )
 }
