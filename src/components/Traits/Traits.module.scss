@@ -37,3 +37,16 @@
     color: $secondary-dark-grey;
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    gap: 50px;
+
+    &__container {
+      gap: 30px;
+      align-items: start;
+      text-align: left;
+    }
+  }
+}

@@ -7,6 +7,9 @@ import phone from '../../assets/home/desktop/image-hero-phone.png'
 import webDesignMobile from '../../assets/home/mobile/image-web-design.jpg'
 import appDesignMobile from '../../assets/home/mobile/image-app-design.jpg'
 import graphicDesignMobile from '../../assets/home/mobile/image-graphic-design.jpg'
+import webDesignTablet from '../../assets/home/tablet/image-web-design.jpg'
+import appDesignTablet from '../../assets/home/tablet/image-app-design.jpg'
+import graphicDesignTablet from '../../assets/home/tablet/image-graphic-design.jpg'
 
 // components
 import ServicesCards from '../../components/ServicesCards/ServicesCards'
@@ -16,15 +19,18 @@ import Footer from '../../components/Footer/Footer'
 const services = [
   {
     heading: 'Web Design',
-    image: webDesignMobile,
+    imageMobile: webDesignMobile,
+    imageTablet: webDesignTablet,
   },
   {
     heading: 'App Design',
-    image: appDesignMobile,
+    imageMobile: appDesignMobile,
+    imageTablet: appDesignTablet,
   },
   {
     heading: 'Graphic Design',
-    image: graphicDesignMobile,
+    imageMobile: graphicDesignMobile,
+    imageTablet: graphicDesignTablet,
   },
 ]
 

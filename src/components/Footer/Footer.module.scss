@@ -43,8 +43,7 @@ address {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    padding-block: 75px;
-    padding-inline: $mobile-outside-spacing;
+    padding: 75px $mobile-outside-spacing;
   }
   &__logo {
     width: 202px;
@@ -96,5 +95,66 @@ address {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer {
+    background: linear-gradient(0deg, #1d1c1e 63%, rgb(255, 255, 255) 63%);
+
+    &__card {
+      height: 350px;
+      margin-inline: auto;
+      width: $tablet-outside-spacing;
+    }
+    &__card-heading {
+      width: 50%;
+      font-size: 4rem;
+      line-height: 40px;
+    }
+    &__card-sub-heading {
+      width: 60%;
+      font-size: 1.6rem;
+      line-height: 26px;
+    }
+    &__info-container {
+      width: $tablet-outside-spacing;
+      margin: 0 auto;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0;
+      padding-block: 75px;
+    }
+    &__logo {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    &__nav {
+      grid-column: 2/4;
+      height: 100%;
+      flex-direction: row;
+      justify-content: end;
+      gap: 40px;
+      border-top: none;
+      padding-top: 0;
+    }
+    &__address-container,
+    &__contact-container {
+      text-align: left;
+      border-top: 1px solid rgba($primary-white, 0.25);
+      padding-top: 35px;
+      align-items: start;
+    }
+    &__social-menu {
+      width: 100%;
+      justify-content: space-between;
+      height: 100%;
+      align-items: end;
+      border-top: 1px solid rgba($primary-white, 0.25);
+      padding-top: 43.5px;
+      padding-left: 50px;
+    }
   }
 }

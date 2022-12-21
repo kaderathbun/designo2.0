@@ -61,7 +61,7 @@
 
 @media only screen and (min-width: 768px) {
   main {
-    width: 90%;
+    width: $tablet-outside-spacing;
     margin: 0 auto;
   }
 
@@ -83,5 +83,14 @@
     &__image {
       transform: scale(1);
     }
+  }
+
+  .services {
+    padding-inline: 0;
+    margin: 150px auto;
+  }
+
+  .traits {
+    padding-inline: 0;
   }
 }
