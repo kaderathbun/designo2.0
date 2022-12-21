@@ -3,18 +3,17 @@
 
 .hero {
   background-color: $primary-peach;
-  padding-inline: $mobile-outside-spacing;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
   height: 843px;
-  padding-block: 75px 0;
   position: relative;
   overflow: hidden;
   background-image: url('../../assets/home/desktop/bg-pattern-hero-home.svg');
   background-repeat: no-repeat;
   background-position: left center;
+  padding: 75px $mobile-outside-spacing;
 
   &__heading {
     font-size: 3.2rem;
@@ -58,4 +57,31 @@
   gap: 75px;
   padding-inline: $mobile-outside-spacing;
   margin-bottom: $margin-block;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .hero {
+    border-radius: $border-radius;
+    background-position: center right -120px;
+    background-size: 90%;
+
+    &__heading {
+      width: 75%;
+      font-size: 4.8rem;
+      line-height: 48px;
+    }
+    &__sub-heading {
+      width: 65%;
+      font-size: 1.6rem;
+      line-height: 26px;
+    }
+    &__image {
+      transform: scale(1);
+    }
+  }
 }
