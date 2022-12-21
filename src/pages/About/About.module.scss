@@ -1,0 +1,26 @@
+@import '/src/scss/variables';
+@import '/src/scss/mixins';
+
+.about {
+  &__heading {
+    font-size: 3.2rem;
+    font-weight: $weight-bold;
+    line-height: 36px;
+    color: $primary-white;
+  }
+  &__sub-heading {
+    font-size: 1.5rem;
+    font-weight: $weight-regular;
+    line-height: 25px;
+    color: $primary-white;
+    text-align: center;
+  }
+}
+
+.locations {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-block: $margin-block;
+  padding-inline: $mobile-outside-spacing;
+}

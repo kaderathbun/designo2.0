@@ -31,7 +31,7 @@ const services = [
 export default function Home() {
   return (
     <React.Fragment>
-      <main className={styles.home}>
+      <main>
         <section className={styles.hero}>
           <h1 className={styles.hero__heading}>
             Award-winning custom designs and digital branding solutions
