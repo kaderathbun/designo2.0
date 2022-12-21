@@ -28,14 +28,16 @@ export default function LocationsCards() {
     <React.Fragment>
       {locations.map((location) => {
         return (
-          <div className={styles.card}>
+          <div key={location.country} className={styles.card}>
             <img
               className={styles.card__image}
               src={location.image}
               alt={location.country}
             />
             <h2 className={styles.card__heading}>{location.country}</h2>
-            <Link className={styles.card__cta} to="/locations">See Location</Link>
+            <Link className={styles.card__cta} to="/locations">
+              See Location
+            </Link>
           </div>
         )
       })}

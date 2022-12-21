@@ -1,0 +1,100 @@
+@import '/src/scss/variables';
+@import '/src/scss/mixins';
+
+.error {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: $weight-bold;
+  line-height: 26px;
+  font-style: italic;
+  top: 30px;
+  right: 15px;
+  color: $primary-white;
+
+  &::after {
+    margin-left: 10px;
+    content: url('../../assets/contact/desktop/icon-error.svg');
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.form {
+  height: 764px;
+  background-color: $primary-peach;
+  background-image: url('../../assets/shared/desktop/bg-pattern-two-circles.svg');
+  background-position: top;
+  background-repeat: no-repeat;
+  margin-bottom: $margin-block;
+
+  &__form-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 70px $mobile-outside-spacing;
+  }
+  &__hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__heading {
+    font-size: 3.2rem;
+    font-weight: $weight-bold;
+    line-height: 36px;
+    color: $primary-white;
+    text-align: center;
+  }
+  &__sub-heading {
+    font-size: 1.5rem;
+    font-weight: $weight-regular;
+    line-height: 25px;
+    color: $primary-white;
+    text-align: center;
+  }
+  &__inputs {
+    margin-top: 30px;
+  }
+  &__btn {
+    @include btn;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  fieldset {
+    position: relative;
+    border: none;
+  }
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    color: $primary-white;
+    padding: 30px 15px 15px;
+    border: none;
+    border-bottom: 1px solid $primary-white;
+    background-color: transparent;
+
+    &::placeholder {
+      color: rgba($primary-white, 0.5);
+    }
+    &:focus-visible {
+      outline: none;
+      border-bottom: 2px solid $primary-white;
+    }
+  }
+  textarea {
+    height: 120px;
+  }
+}
+
+.locations {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-block: $margin-block;
+  padding-inline: $mobile-outside-spacing;
+}

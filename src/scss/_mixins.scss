@@ -16,3 +16,22 @@
   max-height: 56px;
   padding: 15px;
 }
+
+// button
+@mixin btn {
+  position: relative;
+  z-index: 999;
+  font-size: 1.5rem;
+  font-weight: $weight-bold;
+  line-height: 1px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: $secondary-dark-grey;
+  background-color: $primary-white;
+  padding-block: 25px;
+  border: none;
+  border-radius: $border-radius;
+  width: 152px;
+}
