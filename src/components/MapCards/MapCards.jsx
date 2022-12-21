@@ -47,7 +47,7 @@ export default function MapCards() {
         return (
           <div key={location.city} className={styles.card}>
             <MapContainer
-              className={styles['leaflet-container']}
+              className={styles['card__map']}
               center={[location.lat, location.long]}
               zoom={13}
               scrollWheelZoom={false}
@@ -66,7 +66,7 @@ export default function MapCards() {
                 </Popup>
               </Marker>
             </MapContainer>
-            <div className={styles['location-container']}>
+            <div className={styles['card__container']}>
               <h2 className={styles.card__heading}>{location.country}</h2>
               <address className={styles['card__address-container']}>
                 <span className={styles.card__address}>
@@ -77,7 +77,7 @@ export default function MapCards() {
               </address>
               <address className={styles['card__contact-container']}>
                 <span className={styles.card__address}>
-                  Contact Us <br />
+                  <strong>Contact Us</strong> <br />
                   <a href="tel:+1253-863-8967">{location.phone}</a> <br />
                   <a href="mailto:contact@designo.co">{location.email}</a>
                 </span>

@@ -2,4 +2,8 @@
 @import '/src/scss/mixins';
 
 .locations {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-bottom: $margin-block;
 }

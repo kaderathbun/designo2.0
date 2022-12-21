@@ -1,6 +1,10 @@
 @import '/src/scss/variables';
 @import '/src/scss/mixins';
 
+address {
+  font-style: normal;
+}
+
 .footer {
   background: linear-gradient(0deg, #1d1c1e 80%, rgb(255, 255, 255) 80%);
 
@@ -76,7 +80,6 @@
     font-weight: $weight-regular;
     line-height: 26px;
     color: rgba($primary-white, 0.5);
-    font-style: normal;
     display: flex;
     flex-direction: column;
     align-items: center;

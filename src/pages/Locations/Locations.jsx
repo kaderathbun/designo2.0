@@ -5,6 +5,7 @@ import styles from './Locations.module.scss'
 
 // components
 import MapCards from '../../components/MapCards/MapCards'
+import Footer from '../../components/Footer/Footer'
 
 export default function Locations() {
   return (
@@ -12,6 +13,7 @@ export default function Locations() {
       <section className={styles.locations}>
         <MapCards />
       </section>
+      <Footer isSecondary={false} />
     </main>
   )
 }
