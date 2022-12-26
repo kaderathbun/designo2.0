@@ -25,18 +25,21 @@ const services = [
     imageMobile: webDesignMobile,
     imageTablet: webDesignTablet,
     imageDesktop: webDesignDesktop,
+    redirect: '/web-design',
   },
   {
     heading: 'App Design',
     imageMobile: appDesignMobile,
     imageTablet: appDesignTablet,
     imageDesktop: appDesignDesktop,
+    redirect: '/app-design',
   },
   {
     heading: 'Graphic Design',
     imageMobile: graphicDesignMobile,
     imageTablet: graphicDesignTablet,
     imageDesktop: graphicDesignDesktop,
+    redirect: '/graphic-design',
   },
 ]
 
@@ -53,7 +56,9 @@ export default function Home() {
             fully responsive websites, app design, and engaging brand
             experiences. Find out more about our services.
           </p>
-          <Link className={styles.hero__cta}>Learn More</Link>
+          <Link to="about" className={styles.hero__cta}>
+            Learn More
+          </Link>
           <img
             className={styles.hero__image}
             src={phone}

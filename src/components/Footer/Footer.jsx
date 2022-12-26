@@ -59,19 +59,21 @@ export default function Footer({ isSecondary }) {
           Ready to take it to the next level? Contact us today and find out how
           our expertise can help your business grow.
         </p>
-        <Link className={styles.footer__cta}>Get in touch</Link>
+        <Link to="/contact" className={styles.footer__cta}>
+          Get in touch
+        </Link>
       </div>
       <div className={styles['footer__info-container']}>
         <img className={styles.footer__logo} src={logo} alt="Designo" />
         <ul className={styles.footer__nav}>
           <li className={styles['footer__nav-links']}>
-            <Link>Our Company</Link>
+            <Link to="/about">Our Company</Link>
           </li>
           <li className={styles['footer__nav-links']}>
-            <Link>Locations</Link>
+            <Link to="/locations">Locations</Link>
           </li>
           <li className={styles['footer__nav-links']}>
-            <Link>Contact</Link>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
         <address className={styles['footer__address-container']}>
