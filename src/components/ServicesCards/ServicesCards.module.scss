@@ -68,8 +68,8 @@
 
 @media only screen and (min-width: 1440px) {
   .card {
-    height: 308px;
     height: 100%;
+    width: 100%;
 
     &:nth-child(1) {
       grid-row: 1/3;

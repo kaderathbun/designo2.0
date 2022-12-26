@@ -49,3 +49,23 @@
     padding: 0;
   }
 }
+
+@media only screen and (min-width: 1440px) {
+  .hero {
+    background-size: 25%;
+
+    &__sub-heading {
+      width: 35%;
+    }
+  }
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+  }
+  .services {
+    flex-direction: row;
+    height: 308px;
+    padding-inline: 0;
+  }
+}

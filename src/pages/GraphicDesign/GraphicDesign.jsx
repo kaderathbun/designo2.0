@@ -10,7 +10,7 @@ import webDesignMobile from '../../assets/home/mobile/image-web-design.jpg'
 import appDesignTablet from '../../assets/home/tablet/image-app-design.jpg'
 import webDesignTablet from '../../assets/home/tablet/image-web-design.jpg'
 import appDesignDesktop from '../../assets/home/desktop/image-app-design.jpg'
-import webDesignDesktop from '../../assets/home/desktop/image-web-design-large.jpg'
+import webDesignDesktop from '../../assets/home/desktop/image-web-design-small.jpg'
 
 // components
 import HeroCards from '../../components/HeroCards/HeroCards'
