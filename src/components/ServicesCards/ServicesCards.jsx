@@ -30,13 +30,34 @@ export default function ServicesCards({ data }) {
           )
         })}
       </MediaQuery>
-      <MediaQuery minWidth={768} maxWidth={1440}>
+      <MediaQuery minWidth={768} maxWidth={1439}>
         {data.map((service) => {
           return (
             <div key={service.heading} className={styles.card}>
               <img
                 className={styles.card__image}
                 src={service.imageTablet}
+                alt={service.heading}
+              />
+              <div className={styles['card__text-container']}>
+                <span className={styles.card__heading}>{service.heading}</span>
+                <span className={styles['card__sub-heading']}>
+                  View Projects
+                  <img className={styles.card__arrow} src={arrow} alt="" />
+                </span>
+              </div>
+              <Link to={service.redirect} className={styles.card__link}></Link>
+            </div>
+          )
+        })}
+      </MediaQuery>
+      <MediaQuery minWidth={1440}>
+        {data.map((service) => {
+          return (
+            <div key={service.heading} className={styles.card}>
+              <img
+                className={styles.card__image}
+                src={service.imageDesktop}
                 alt={service.heading}
               />
               <div className={styles['card__text-container']}>

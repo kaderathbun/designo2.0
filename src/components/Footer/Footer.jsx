@@ -50,7 +50,7 @@ export default function Footer({ isSecondary }) {
     >
       <div
         className={styles.footer__card}
-        style={{ display: isSecondary ? 'none' : 'flex' }}
+        style={{ display: isSecondary ? 'none' : {} }}
       >
         <h3 className={styles['footer__card-heading']}>
           Let’s talk about your project

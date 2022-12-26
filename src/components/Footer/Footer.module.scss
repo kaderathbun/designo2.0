@@ -6,7 +6,7 @@ address {
 }
 
 .footer {
-  background: linear-gradient(0deg, #1d1c1e 80%, rgb(255, 255, 255) 80%);
+  background: linear-gradient(0deg, #1d1c1e 80%, transparent 80%);
 
   &__card {
     height: 379px;
@@ -100,7 +100,7 @@ address {
 
 @media only screen and (min-width: 768px) {
   .footer {
-    background: linear-gradient(0deg, #1d1c1e 63%, rgb(255, 255, 255) 63%);
+    background: linear-gradient(0deg, #1d1c1e 63%, transparent 63%);
 
     &__card {
       height: 350px;
@@ -155,6 +155,40 @@ address {
       border-top: 1px solid rgba($primary-white, 0.25);
       padding-top: 43.5px;
       padding-left: 50px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .footer {
+    background: linear-gradient(0deg, #1d1c1e 66%, transparent 66%);
+
+    &__card {
+      width: $desktop-outside-spacing;
+      height: 292px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, min-content);
+      place-content: center;
+      padding-inline: 100px;
+      background-size: 40%;
+    }
+    &__info-container {
+      width: $desktop-outside-spacing;
+      padding: 25px 0 50px;
+    }
+    &__card-heading {
+      width: 60%;
+      text-align: left;
+    }
+    &__card-sub-heading {
+      width: 95%;
+      text-align: left;
+    }
+    &__cta {
+      grid-column: 2/3;
+      grid-row: 1/3;
+      justify-self: end;
     }
   }
 }

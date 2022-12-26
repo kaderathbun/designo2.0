@@ -10,7 +10,9 @@ import loopStudios from '../../assets/app-design/desktop/image-loopstudios.jpg'
 import webDesignMobile from '../../assets/home/mobile/image-web-design.jpg'
 import graphicDesignMobile from '../../assets/home/mobile/image-graphic-design.jpg'
 import webDesignTablet from '../../assets/home/tablet/image-web-design.jpg'
-import graphicDesigntablet from '../../assets/home/tablet/image-graphic-design.jpg'
+import graphicDesignTablet from '../../assets/home/tablet/image-graphic-design.jpg'
+import webDesignDesktop from '../../assets/home/desktop/image-web-design-large.jpg'
+import graphicDesignDesktop from '../../assets/home/desktop/image-graphic-design.jpg'
 
 // components
 import HeroCards from '../../components/HeroCards/HeroCards'
@@ -54,12 +56,14 @@ const services = [
     heading: 'Web Design',
     imageMobile: webDesignMobile,
     imageTablet: webDesignTablet,
+    imageDesktop: webDesignDesktop,
     redirect: '/web-design',
   },
   {
     heading: 'Graphic Design',
     imageMobile: graphicDesignMobile,
-    imageTablet: graphicDesigntablet,
+    imageTablet: graphicDesignTablet,
+    imageDesktop: graphicDesignDesktop,
     redirect: '/graphic-design',
   },
 ]

@@ -23,3 +23,16 @@ body {
     margin: 0 auto;
   }
 }
+
+@media only screen and (min-width: 1440px) {
+  .App {
+    background-image: url('../src/assets/shared/desktop/bg-pattern-leaf.svg'),
+      url('../src/assets/shared/desktop/bg-pattern-leaf-rotated.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 470px left, bottom 520px right;
+    background-size: 65%, 65%;
+  }
+  main {
+    width: $desktop-outside-spacing;
+  }
+}

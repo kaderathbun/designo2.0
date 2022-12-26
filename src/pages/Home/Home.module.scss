@@ -89,3 +89,39 @@
     padding-inline: 0;
   }
 }
+
+@media only screen and (min-width: 1440px) {
+  .hero {
+    height: 640px;
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    background-size: contain;
+    background-position: center right;
+    padding: 120px 85px;
+
+    &__heading {
+      text-align: left;
+      width: 50%;
+    }
+    &__sub-heading {
+      text-align: left;
+      width: 45%;
+    }
+    &__image {
+      top: auto;
+      bottom: -225px;
+      right: -90px;
+    }
+  }
+
+  .services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .traits {
+    flex-direction: row;
+    gap: 50px;
+  }
+}

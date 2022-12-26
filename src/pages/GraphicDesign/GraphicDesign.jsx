@@ -9,6 +9,8 @@ import appDesignMobile from '../../assets/home/mobile/image-app-design.jpg'
 import webDesignMobile from '../../assets/home/mobile/image-web-design.jpg'
 import appDesignTablet from '../../assets/home/tablet/image-app-design.jpg'
 import webDesignTablet from '../../assets/home/tablet/image-web-design.jpg'
+import appDesignDesktop from '../../assets/home/desktop/image-app-design.jpg'
+import webDesignDesktop from '../../assets/home/desktop/image-web-design-large.jpg'
 
 // components
 import HeroCards from '../../components/HeroCards/HeroCards'
@@ -39,12 +41,14 @@ const services = [
     heading: 'App Design',
     imageMobile: appDesignMobile,
     imageTablet: appDesignTablet,
+    imageDesktop: appDesignDesktop,
     redirect: '/app-design',
   },
   {
     heading: 'Web Design',
     imageMobile: webDesignMobile,
     imageTablet: webDesignTablet,
+    imageDesktop: webDesignDesktop,
     redirect: '/web-design',
   },
 ]

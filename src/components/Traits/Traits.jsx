@@ -28,7 +28,7 @@ const traits = [
   },
 ]
 
-export default function Traits({}) {
+export default function Traits() {
   return (
     <React.Fragment>
       {traits.map((trait) => {

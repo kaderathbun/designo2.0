@@ -65,3 +65,25 @@
     height: 200px;
   }
 }
+
+@media only screen and (min-width: 1440px) {
+  .card {
+    height: 308px;
+    height: 100%;
+
+    &:nth-child(1) {
+      grid-row: 1/3;
+    }
+
+    &__text-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    &__heading {
+      font-size: 4rem;
+      line-height: 48px;
+      letter-spacing: 2px;
+    }
+  }
+}

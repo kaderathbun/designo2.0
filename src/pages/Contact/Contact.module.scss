@@ -87,7 +87,9 @@
     }
   }
   textarea {
-    height: 120px;
+    min-height: 120px;
+    max-height: 200px;
+    resize: vertical;
   }
 }
 
