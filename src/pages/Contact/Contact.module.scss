@@ -1,6 +1,15 @@
 @import '/src/scss/variables';
 @import '/src/scss/mixins';
 
+// remove autfill style change
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+  background-color: transparent !important;
+}
+
 .error {
   position: absolute;
   display: flex;

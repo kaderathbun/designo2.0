@@ -90,6 +90,10 @@
         font-size: 1.4rem;
         line-height: 14px;
         color: $secondary-dark-grey;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }

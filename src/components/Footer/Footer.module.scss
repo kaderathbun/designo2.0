@@ -139,6 +139,13 @@ address {
       gap: 40px;
       border-top: none;
       padding-top: 0;
+
+      & > li > a {
+        &:hover {
+          text-decoration: underline;
+          text-decoration-color: rgba($primary-white, 0.25);
+        }
+      }
     }
     &__address-container,
     &__contact-container {
@@ -155,6 +162,14 @@ address {
       border-top: 1px solid rgba($primary-white, 0.25);
       padding-top: 43.5px;
       padding-left: 50px;
+
+      & > a {
+        transition: all 0.5s ease;
+
+        &:hover {
+          filter: saturate(0.5);
+        }
+      }
     }
   }
 }

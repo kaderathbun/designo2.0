@@ -17,6 +17,8 @@
     transform: translate(-50%, -50%);
     width: 100%;
     text-align: center;
+    z-index: 999;
+    pointer-events: none;
   }
   &__heading {
     display: block;
