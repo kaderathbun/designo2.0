@@ -83,3 +83,21 @@ address {
     }
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .card {
+    flex-direction: row;
+
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+    }
+
+    &__map {
+      width: 562px;
+      height: 326px;
+    }
+    &__container {
+      width: 100%;
+    }
+  }
+}
