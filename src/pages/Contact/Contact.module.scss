@@ -130,3 +130,43 @@
     }
   }
 }
+
+@media only screen and (min-width: 1440px) {
+  .form {
+    height: 480px;
+    background-size: 50%;
+    background-position: top -130px left;
+
+    &__form-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 30px;
+      padding: 0 100px;
+    }
+    &__hero-wrapper {
+      justify-content: center;
+      width: 90%;
+    }
+    &__contact-container {
+      padding: 0;
+    }
+    &__inputs {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 0;
+    }
+    textarea {
+      min-height: auto;
+      max-height: 120px;
+      resize: vertical;
+      resize: none;
+    }
+  }
+
+  .locations {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-inline: 0;
+  }
+}

@@ -17,7 +17,10 @@ export default function Header() {
   return (
     <nav className={styles.header}>
       <div className={styles.header__container}>
-        <img className={styles.header__logo} src={logo} alt="" />
+        <Link to="/">
+          <img className={styles.header__logo} src={logo} alt="" />
+        </Link>
+
         <img
           onClick={handleClick}
           className={styles.header__controller}
@@ -33,13 +36,13 @@ export default function Header() {
         }
       >
         <li className={styles.header__links}>
-          <Link>Our Company</Link>
+          <Link to="/about">Our Company</Link>
         </li>
         <li className={styles.header__links}>
-          <Link>Locations</Link>
+          <Link to="/locations">Locations</Link>
         </li>
         <li className={styles.header__links}>
-          <Link>Contact</Link>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </nav>
