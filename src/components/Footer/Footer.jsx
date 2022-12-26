@@ -64,7 +64,9 @@ export default function Footer({ isSecondary }) {
         </Link>
       </div>
       <div className={styles['footer__info-container']}>
-        <img className={styles.footer__logo} src={logo} alt="Designo" />
+        <Link to="/">
+          <img className={styles.footer__logo} src={logo} alt="Designo" />
+        </Link>
         <ul className={styles.footer__nav}>
           <li className={styles['footer__nav-links']}>
             <Link to="/about">Our Company</Link>

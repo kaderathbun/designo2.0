@@ -36,7 +36,20 @@
     width: 100%;
 
     &--active {
+      position: relative;
       transform: translateY(0%);
+      &:after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100vh;
+        background-color: rgba($primary-black, 0.5);
+        top: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 99999;
+      }
     }
   }
   &__links {
@@ -84,6 +97,12 @@
       height: auto;
       padding-inline: 0;
       padding-block: 0;
+
+      &--active {
+        &:after {
+          display: none;
+        }
+      }
     }
     &__links {
       & > a {

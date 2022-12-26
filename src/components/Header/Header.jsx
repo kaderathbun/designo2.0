@@ -14,10 +14,17 @@ export default function Header() {
     setIsOpen(!isOpen)
   }
 
+  if (isOpen) {
+    document.body.style.overflow = 'hidden'
+    window.scrollTo(0, 0)
+  } else {
+    document.body.style.overflow = 'auto'
+  }
+
   return (
     <nav className={styles.header}>
       <div className={styles.header__container}>
-        <Link to="/">
+        <Link to="/" onClick={(prevState) => setIsOpen(false)}>
           <img className={styles.header__logo} src={logo} alt="" />
         </Link>
 
@@ -36,13 +43,19 @@ export default function Header() {
         }
       >
         <li className={styles.header__links}>
-          <Link to="/about">Our Company</Link>
+          <Link to="/about" onClick={(prevState) => setIsOpen(false)}>
+            Our Company
+          </Link>
         </li>
         <li className={styles.header__links}>
-          <Link to="/locations">Locations</Link>
+          <Link to="/locations" onClick={(prevState) => setIsOpen(false)}>
+            Locations
+          </Link>
         </li>
         <li className={styles.header__links}>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact" onClick={(prevState) => setIsOpen(false)}>
+            Contact
+          </Link>
         </li>
       </ul>
     </nav>

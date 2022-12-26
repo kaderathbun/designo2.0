@@ -45,6 +45,7 @@
     &__container {
       background-position: top -350px left -100px;
       border-radius: 0 0 $border-radius $border-radius;
+      align-items: center;
 
       &--secondary {
         background-image: url('../../assets/shared/desktop/bg-pattern-three-circles.svg');
@@ -57,7 +58,7 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1440px) {
   .card {
     display: flex;
     flex-direction: row-reverse;
