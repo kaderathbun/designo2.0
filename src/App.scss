@@ -35,5 +35,6 @@ body {
   main {
     margin: 0 auto;
     width: $desktop-outside-spacing;
+    max-width: 1440px;
   }
 }

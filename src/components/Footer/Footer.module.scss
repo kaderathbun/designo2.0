@@ -180,6 +180,7 @@ address {
 
     &__card {
       width: $desktop-outside-spacing;
+      max-width: 1440px;
       height: 292px;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -190,6 +191,7 @@ address {
     }
     &__info-container {
       width: $desktop-outside-spacing;
+      max-width: 1440px;
       padding: 25px 0 50px;
     }
     &__card-heading {
