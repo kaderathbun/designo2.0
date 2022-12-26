@@ -56,3 +56,34 @@
     }
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .card {
+    display: flex;
+    flex-direction: row-reverse;
+
+    &__image {
+      border-radius: 0 $border-radius $border-radius 0;
+    }
+
+    &__container {
+      border-radius: $border-radius 0 0 $border-radius;
+      align-items: start;
+      background-image: url('../../assets/shared/desktop/bg-pattern-small-circle.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: top -200px left -50px;
+      padding: 75px;
+
+      &--secondary {
+        background-image: url('../../assets/shared/desktop/bg-pattern-three-circles.svg');
+        background-position: top;
+        background-size: 100%;
+        background-repeat: repeat;
+        border-radius: 0 $border-radius $border-radius 0;
+        align-items: start;
+        padding: 75px;
+      }
+    }
+  }
+}

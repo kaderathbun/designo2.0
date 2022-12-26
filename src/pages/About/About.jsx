@@ -9,6 +9,9 @@ import realDealMobile from '../../assets/about/mobile/image-real-deal.jpg'
 import aboutTablet from '../../assets/about/tablet/image-about-hero.jpg'
 import worldClassTalentTablet from '../../assets/about/tablet/image-world-class-talent.jpg'
 import realDealTablet from '../../assets/about/tablet/image-real-deal.jpg'
+import aboutDesktop from '../../assets/about/desktop/image-about-hero.jpg'
+import worldClassTalentDesktop from '../../assets/about/desktop/image-world-class-talent.jpg'
+import realDealDesktop from '../../assets/about/desktop/image-real-deal.jpg'
 
 // compontents
 import AboutCards from '../../components/AboutCards/AboutCards'
@@ -70,7 +73,7 @@ export default function About() {
               image={aboutTablet}
               alt="Team meeting at conference table"
               isSecondary={false}
-              style={{marginBottom: '100px'}}
+              styleCard={{ marginBottom: '100px' }}
             >
               <h1 className={styles.about__heading}>About Us</h1>
               <p className={styles['about__sub-heading']}>
@@ -111,6 +114,54 @@ export default function About() {
               </p>
             </AboutCards>
           </MediaQuery>
+          <MediaQuery minWidth={1440}>
+            <AboutCards
+              image={aboutDesktop}
+              alt="Team meeting at conference table"
+              isSecondary={false}
+              styleCard={{ marginBottom: '100px' }}
+            >
+              <h1 className={styles.about__heading}>About Us</h1>
+              <p className={styles['about__sub-heading']}>
+                Founded in 2010, we are a creative agency that produces lasting
+                results for our clients. We’ve partnered with many startups,
+                corporations, and nonprofits alike to craft designs that make
+                real impact. We’re always looking forward to creating brands,
+                products, and digital experiences that connect with our clients’
+                audiences.
+              </p>
+            </AboutCards>
+            <AboutCards
+              image={worldClassTalentDesktop}
+              alt="Woman browsing art work"
+              isSecondary={true}
+              styleCard={{ display: 'flex', flexDirection: 'row' }}
+              styleImage={{borderRadius: '10px 0 0 10px'}}
+            >
+              <h1
+                className={styles.about__heading}
+                style={{ color: '#e7816b' }}
+              >
+                World-class talent
+              </h1>
+              <p
+                className={styles['about__sub-heading']}
+                style={{ color: '#333136' }}
+              >
+                We are a crew of strategists, problem-solvers, and
+                technologists. Every design is thoughtfully crafted from concept
+                to launch, ensuring success in its given market. We are
+                constantly updating our skills in a myriad of platforms.
+                <br />
+                <br />
+                Our team is multi-disciplinary and we are not merely interested
+                in form — content and meaning are just as important. We give
+                great importance to craftsmanship, service, and prompt delivery.
+                Clients have always been impressed with our high-quality
+                outcomes that encapsulates their brand’s story and mission.
+              </p>
+            </AboutCards>
+          </MediaQuery>
         </section>
         <section className={styles.locations}>
           <LocationsCards />
@@ -121,7 +172,7 @@ export default function About() {
               image={realDealMobile}
               alt="Woman hanging artwork"
               isSecondary={true}
-              style={{ marginBottom: '150px' }}
+              styleCard={{ marginBottom: '150px' }}
             >
               <h1
                 className={styles.about__heading}
@@ -152,7 +203,42 @@ export default function About() {
               image={realDealTablet}
               alt="Woman hanging artwork"
               isSecondary={true}
-              style={{ marginBottom: '150px' }}
+              styleCard={{ marginBottom: '150px' }}
+            >
+              <h1
+                className={styles.about__heading}
+                style={{ color: '#e7816b' }}
+              >
+                The real deal
+              </h1>
+              <p
+                className={styles['about__sub-heading']}
+                style={{ color: '#333136' }}
+              >
+                As strategic partners in our clients’ businesses, we are ready
+                to take on any challenge as our own. Solving real problems
+                require empathy and collaboration, and we strive to bring a
+                fresh perspective to every opportunity. We make design and
+                technology more accessible and give you tools to measure
+                success.
+                <br />
+                <br />
+                We are visual storytellers in appealing and captivating ways. By
+                combining business and marketing strategies, we inspire
+                audiences to take action and drive real results.
+              </p>
+            </AboutCards>
+          </MediaQuery>
+          <MediaQuery minWidth={1440}>
+            <AboutCards
+              image={realDealDesktop}
+              alt="Woman hanging artwork"
+              isSecondary={true}
+              styleCard={{
+                marginBottom: '150px',
+              }}
+              styleImage={{borderRadius: '0 10px 10px 0'}}
+              styleContainer={{borderRadius: '10px 0 0 10px'}}
             >
               <h1
                 className={styles.about__heading}
