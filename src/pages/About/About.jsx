@@ -23,7 +23,7 @@ export default function About() {
     <React.Fragment>
       <main>
         <section className={styles.about}>
-          <MediaQuery minWidth={0} maxWidth={767}>
+          <MediaQuery minWidth={0} maxWidth={375}>
             <AboutCards
               image={aboutMobile}
               alt="Team meeting at conference table"
@@ -68,7 +68,7 @@ export default function About() {
               </p>
             </AboutCards>
           </MediaQuery>
-          <MediaQuery minWidth={768} maxWidth={1439}>
+          <MediaQuery minWidth={376} maxWidth={1439}>
             <AboutCards
               image={aboutTablet}
               alt="Team meeting at conference table"
@@ -136,7 +136,7 @@ export default function About() {
               alt="Woman browsing art work"
               isSecondary={true}
               styleCard={{ display: 'flex', flexDirection: 'row' }}
-              styleImage={{borderRadius: '10px 0 0 10px'}}
+              styleImage={{ borderRadius: '10px 0 0 10px' }}
             >
               <h1
                 className={styles.about__heading}
@@ -237,8 +237,8 @@ export default function About() {
               styleCard={{
                 marginBottom: '150px',
               }}
-              styleImage={{borderRadius: '0 10px 10px 0'}}
-              styleContainer={{borderRadius: '10px 0 0 10px'}}
+              styleImage={{ borderRadius: '0 10px 10px 0' }}
+              styleContainer={{ borderRadius: '10px 0 0 10px' }}
             >
               <h1
                 className={styles.about__heading}

@@ -57,7 +57,7 @@
     transition: all 0.5s ease;
 
     &:hover {
-      background-color: rgba($primary-peach, 0.6);
+      background-color: rgba($primary-peach, 0.75);
     }
   }
 }
@@ -65,6 +65,7 @@
 @media only screen and (min-width: 768px) {
   .card {
     height: 200px;
+    width: 100%;
   }
 }
 

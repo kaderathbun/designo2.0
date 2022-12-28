@@ -34,6 +34,7 @@ address {
     line-height: 25px;
     color: $primary-white;
     text-align: center;
+    width: clamp(250px, 350px, 100%);
   }
   &__cta {
     @include cta;
@@ -106,6 +107,7 @@ address {
       height: 350px;
       margin-inline: auto;
       width: $tablet-outside-spacing;
+      max-width: 768px;
     }
     &__card-heading {
       width: 50%;
@@ -118,7 +120,6 @@ address {
       line-height: 26px;
     }
     &__info-container {
-      width: $tablet-outside-spacing;
       margin: 0 auto;
       padding: 0;
       display: grid;
@@ -126,6 +127,8 @@ address {
       grid-template-rows: 1fr 1fr;
       gap: 0;
       padding: 50px 0 75px;
+      width: $tablet-outside-spacing;
+      max-width: 768px;
     }
     &__logo {
       grid-column: 1/2;
@@ -179,7 +182,6 @@ address {
     background: linear-gradient(0deg, #1d1c1e 66%, transparent 66%);
 
     &__card {
-      width: $desktop-outside-spacing;
       max-width: 1440px;
       height: 292px;
       display: grid;
@@ -188,11 +190,14 @@ address {
       place-content: center;
       padding-inline: 100px;
       background-size: 40%;
+      width: $desktop-outside-spacing;
+      max-width: 1152px;
     }
     &__info-container {
-      width: $desktop-outside-spacing;
       max-width: 1440px;
       padding: 25px 0 50px;
+      width: $desktop-outside-spacing;
+      max-width: 1152px;
     }
     &__card-heading {
       width: 60%;
