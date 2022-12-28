@@ -26,11 +26,11 @@ body {
 
 @media only screen and (min-width: 1440px) {
   .App {
-    // background-image: url('../src/assets/shared/desktop/bg-pattern-leaf.svg'),
-    //   url('../src/assets/shared/desktop/bg-pattern-leaf-rotated.svg');
-    // background-repeat: no-repeat, no-repeat;
-    // background-position: top 470px left, bottom 480px right;
-    // background-size: 70%, 70%;
+    background-image: url('../src/assets/shared/desktop/bg-pattern-leaf.svg'),
+      url('../src/assets/shared/desktop/bg-pattern-leaf-rotated.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 470px left, bottom 480px right;
+    background-size: 70%, 70%;
   }
   main {
     margin: 0 auto;

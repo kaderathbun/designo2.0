@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
@@ -9,11 +9,24 @@ import styles from './Contact.module.scss'
 // components
 import LocationsCards from '../../components/LocationsCards/LocationsCards'
 import Footer from '../../components/Footer/Footer'
+import Modal from '../../components/Modal/Modal'
 
 const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
 export default function Contact() {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+  const [msg, setMsg] = useState('')
+  const [isOpen, setIsOpen] = useState(false)
+
+  if (isOpen) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = 'auto'
+  }
+
   const schema = yup.object().shape({
     name: yup.string().required("Can't be empty!"),
     email: yup.string().email().required('Email Invalid'),
@@ -32,6 +45,11 @@ export default function Contact() {
   const onSubmit = (data, e) => {
     e.preventDefault()
     console.log(data)
+    setName('')
+    setEmail('')
+    setPhone('')
+    setMsg('')
+    setIsOpen(true)
   }
 
   return (
@@ -53,7 +71,13 @@ export default function Contact() {
               onSubmit={handleSubmit(onSubmit)}
             >
               <fieldset>
-                <input type="text" placeholder="Name" {...register('name')} />
+                <input
+                  type="text"
+                  placeholder="Name"
+                  {...register('name')}
+                  onChange={(e) => setName(e.target.value)}
+                  value={name}
+                />
                 {errors.name ? (
                   <p className={styles.error}>{errors.name?.message}</p>
                 ) : null}
@@ -63,6 +87,8 @@ export default function Contact() {
                   type="email"
                   placeholder="Email"
                   {...register('email')}
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
                 />
                 {errors.email ? (
                   <p className={styles.error}>{errors.email?.message}</p>
@@ -73,6 +99,8 @@ export default function Contact() {
                   type="number"
                   placeholder="Phone"
                   {...register('phone')}
+                  onChange={(e) => setPhone(e.target.value)}
+                  value={phone}
                 />
                 {errors.phone ? (
                   <p className={styles.error}>{errors.phone?.message}</p>
@@ -84,6 +112,8 @@ export default function Contact() {
                   rows="5"
                   placeholder="Your Message"
                   {...register('message')}
+                  onChange={(e) => setMsg(e.target.value)}
+                  value={msg}
                 />
                 {errors.message ? (
                   <p className={styles.error}>{errors.message?.message}</p>
@@ -98,6 +128,7 @@ export default function Contact() {
         </section>
       </main>
       <Footer isSecondary={true} />
+      {isOpen ? <Modal setIsOpen={setIsOpen} /> : null}
     </React.Fragment>
   )
 }
