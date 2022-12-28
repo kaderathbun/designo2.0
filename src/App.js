@@ -16,10 +16,14 @@ import About from './pages/About/About'
 import Locations from './pages/Locations/Locations'
 import Contact from './pages/Contact/Contact'
 
+// utils
+import ScrollToTop from './utils/ScrollToTop'
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route index={true} path="/" element={<Home />} />
