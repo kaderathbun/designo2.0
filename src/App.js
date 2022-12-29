@@ -15,6 +15,7 @@ import GraphicDesign from './pages/GraphicDesign/GraphicDesign'
 import About from './pages/About/About'
 import Locations from './pages/Locations/Locations'
 import Contact from './pages/Contact/Contact'
+import Error from './pages/Error/Error'
 
 // utils
 import ScrollToTop from './utils/ScrollToTop'
@@ -33,6 +34,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/locations" element={<Locations />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>
     </div>
