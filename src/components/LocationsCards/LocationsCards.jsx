@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 // styles
 import styles from './LocationsCards.module.scss'
@@ -28,7 +29,14 @@ export default function LocationsCards() {
     <React.Fragment>
       {locations.map((location) => {
         return (
-          <div key={location.country} className={styles.card}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            key={location.country}
+            className={styles.card}
+          >
             <img
               className={styles.card__image}
               src={location.image}
@@ -38,7 +46,7 @@ export default function LocationsCards() {
             <Link className={styles.card__cta} to="/locations">
               See Location
             </Link>
-          </div>
+          </motion.div>
         )
       })}
     </React.Fragment>

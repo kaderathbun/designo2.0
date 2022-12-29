@@ -1,5 +1,6 @@
 import React from 'react'
 import MediaQuery from 'react-responsive'
+import { motion } from 'framer-motion'
 
 // styles
 import styles from './About.module.scss'

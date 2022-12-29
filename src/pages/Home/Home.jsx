@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { delay, motion } from 'framer-motion'
 
 // styles
 import styles from './Home.module.scss'
@@ -47,7 +48,13 @@ export default function Home() {
   return (
     <React.Fragment>
       <main>
-        <section className={styles.hero}>
+        <motion.section
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className={styles.hero}
+        >
           <h1 className={styles.hero__heading}>
             Award-winning custom designs and digital branding solutions
           </h1>
@@ -64,11 +71,23 @@ export default function Home() {
             src={phone}
             alt="Smartphone showcasing design"
           />
-        </section>
-        <section className={styles.services}>
+        </motion.section>
+        <motion.section
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className={styles.services}
+        >
           <ServicesCards data={services} />
-        </section>
-        <section className={styles.traits}>
+        </motion.section>
+        <section
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className={styles.traits}
+        >
           <Traits />
         </section>
       </main>

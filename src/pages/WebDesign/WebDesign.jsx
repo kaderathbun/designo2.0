@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 // styles
 import styles from '../../scss/Design.module.scss'
@@ -80,7 +81,13 @@ export default function WebDesign() {
   return (
     <React.Fragment>
       <main>
-        <section className={styles.hero}>
+        <motion.section
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className={styles.hero}
+        >
           <HeroCards>
             <h1 className={styles.hero__heading}>Web Design</h1>
             <p className={styles['hero__sub-heading']}>
@@ -88,11 +95,23 @@ export default function WebDesign() {
               memorable brand experiences.
             </p>
           </HeroCards>
-        </section>
-        <section className={styles.projects}>
+        </motion.section>
+        <section
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className={styles.projects}
+        >
           <ProjectsCards data={projects} />
         </section>
-        <section className={styles.services}>
+        <section
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className={styles.services}
+        >
           <ServicesCards data={services} />
         </section>
       </main>

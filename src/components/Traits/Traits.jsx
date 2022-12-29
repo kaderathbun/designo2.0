@@ -1,4 +1,5 @@
-import React, { Children } from 'react'
+import React from 'react'
+import { motion } from 'framer-motion'
 
 // styles
 import styles from './Traits.module.scss'
@@ -33,7 +34,14 @@ export default function Traits() {
     <React.Fragment>
       {traits.map((trait) => {
         return (
-          <div key={trait.heading} className={styles.card}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            key={trait.heading}
+            className={styles.card}
+          >
             <img
               className={styles.card__image}
               src={trait.image}
@@ -43,7 +51,7 @@ export default function Traits() {
               <h2 className={styles.card__heading}>{trait.heading}</h2>
               <p className={styles['card__sub-heading']}>{trait.subHeading}</p>
             </div>
-          </div>
+          </motion.div>
         )
       })}
     </React.Fragment>

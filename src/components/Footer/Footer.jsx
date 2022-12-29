@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 // styles
 import styles from './Footer.module.scss'
@@ -40,7 +41,11 @@ const socials = [
 
 export default function Footer({ isSecondary }) {
   return (
-    <footer
+    <motion.footer
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
       className={styles.footer}
       style={{
         background: isSecondary
@@ -107,6 +112,6 @@ export default function Footer({ isSecondary }) {
           })}
         </div>
       </div>
-    </footer>
+    </motion.footer>
   )
 }

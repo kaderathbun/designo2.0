@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 // styles
 import styles from './MapCards.module.scss'
@@ -45,7 +46,14 @@ export default function MapCards() {
     <React.Fragment>
       {mapData.map((location) => {
         return (
-          <div key={location.city} className={styles.card}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            key={location.city}
+            className={styles.card}
+          >
             <MapContainer
               className={styles['card__map']}
               center={[location.lat, location.long]}
@@ -83,7 +91,7 @@ export default function MapCards() {
                 </span>
               </address>
             </div>
-          </div>
+          </motion.div>
         )
       })}
     </React.Fragment>

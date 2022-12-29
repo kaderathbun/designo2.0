@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 import styles from './ProjectsCards.module.scss'
 
@@ -7,7 +8,14 @@ export default function ProjectsCards({ data }) {
     <React.Fragment>
       {data.map((project) => {
         return (
-          <div key={project.name} className={styles.card}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            key={project.name}
+            className={styles.card}
+          >
             <img
               className={styles.card__image}
               src={project.image}
@@ -17,7 +25,7 @@ export default function ProjectsCards({ data }) {
               <h2 className={styles.card__heading}>{project.name}</h2>
               <p className={styles.card__description}>{project.description}</p>
             </div>
-          </div>
+          </motion.div>
         )
       })}
     </React.Fragment>

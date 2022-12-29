@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
+import { motion } from 'framer-motion'
 
 //styles
 import styles from './Contact.module.scss'
@@ -55,7 +56,13 @@ export default function Contact() {
   return (
     <React.Fragment>
       <main>
-        <section className={styles.form}>
+        <motion.section
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className={styles.form}
+        >
           <div className={styles['form__form-container']}>
             <div className={styles['form__hero-wrapper']}>
               <h1 className={styles['form__heading']}>Contact Us</h1>
@@ -122,7 +129,7 @@ export default function Contact() {
               <button className={styles.form__btn}>Submit</button>
             </form>
           </div>
-        </section>
+        </motion.section>
         <section className={styles.locations}>
           <LocationsCards />
         </section>

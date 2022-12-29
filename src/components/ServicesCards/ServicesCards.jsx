@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import MediaQuery from 'react-responsive'
+import { motion } from 'framer-motion'
 
 // styles
 import styles from './ServicesCards.module.scss'
@@ -12,7 +13,14 @@ export default function ServicesCards({ data }) {
       <MediaQuery minWidth={0} maxWidth={767}>
         {data.map((service) => {
           return (
-            <div key={service.heading} className={styles.card}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              key={service.heading}
+              className={styles.card}
+            >
               <img
                 className={styles.card__image}
                 src={service.imageMobile}
@@ -26,14 +34,21 @@ export default function ServicesCards({ data }) {
                 </span>
               </div>
               <Link to={service.redirect} className={styles.card__link}></Link>
-            </div>
+            </motion.div>
           )
         })}
       </MediaQuery>
       <MediaQuery minWidth={768} maxWidth={1439}>
         {data.map((service) => {
           return (
-            <div key={service.heading} className={styles.card}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              key={service.heading}
+              className={styles.card}
+            >
               <img
                 className={styles.card__image}
                 src={service.imageTablet}
@@ -47,14 +62,21 @@ export default function ServicesCards({ data }) {
                 </span>
               </div>
               <Link to={service.redirect} className={styles.card__link}></Link>
-            </div>
+            </motion.div>
           )
         })}
       </MediaQuery>
       <MediaQuery minWidth={1440}>
         {data.map((service) => {
           return (
-            <div key={service.heading} className={styles.card}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              key={service.heading}
+              className={styles.card}
+            >
               <img
                 className={styles.card__image}
                 src={service.imageDesktop}
@@ -68,7 +90,7 @@ export default function ServicesCards({ data }) {
                 </span>
               </div>
               <Link to={service.redirect} className={styles.card__link}></Link>
-            </div>
+            </motion.div>
           )
         })}
       </MediaQuery>
